@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  min-height: 100%;
+  background-color: orange;
+  font-size: 16px;
+}
+main {
+  margin: 0 auto;
+  width: 550px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#principal {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  font-size: large;
+  width: 300px;
+  height: 40px;
+  padding: 15px;
+  border: 0;
+}
+
+.search {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-btn {
+  background-color: #fff;
+  padding: 0 15px;
+  border: 0;
+  cursor: pointer;
+}
+
+.capitais {
+  margin-top: 40px;
+  padding: 20px 60px;
+  border-top: 1px solid #fff;
+}
+
+.capitais h2 {
+  color: #fff;
+  font-size: 32px;
+}
+
+.capital {
+  display: flex;
+  font-size: 18px;
+}
+
+.cidades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.title {
+  color: black;
+  font-weight: 100;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.title-min {
+  margin-right: 8px;
+}
+
+.title-min-2 {
+  margin-left: 165px;
+  margin-right: 8px;
+}
+
+.minCapital {
+  font-weight: bold;
+}
+
+.maxCapital {
+  margin-left: 9px;
+  font-weight: bold;
+}
+
+.nomeCapital {
+  margin-left: 14px;
+  font-weight: bold;
 }
