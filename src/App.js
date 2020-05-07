@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
+import capitais from './services/capitais';
+
 import './App.css';
 
 class App extends Component {
@@ -15,6 +17,7 @@ class App extends Component {
     const res = await axios.get(
       'https://cors-anywhere.herokuapp.com/https://api.hgbrasil.com/weather?woeid=455819'
     );
+    console.log(capitais);
 
     console.log(res.data.results);
   }
