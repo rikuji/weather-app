@@ -1,0 +1,18 @@
+.capital {
+  display: flex;
+  font-size: 18px;
+}
+
+.minCapital {
+  font-weight: bold;
+}
+
+.maxCapital {
+  margin-left: 9px;
+  font-weight: bold;
+}
+
+.nomeCapital {
+  margin-left: 14px;
+  font-weight: bold;
+}
