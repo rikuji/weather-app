@@ -12,15 +12,15 @@ class App extends Component {
       capitais: [
         {
           id: 1,
-          cidade: 'Rio de Janeiro',
           min: 18,
           max: 27,
+          cidade: 'Rio de Janeiro',
         },
         {
           id: 2,
-          cidade: 'Salvador',
           min: 14,
           max: 22,
+          cidade: 'Salvador',
         },
         {
           id: 3,
@@ -71,10 +71,27 @@ class App extends Component {
           cidade: 'João Pessoa',
         },
       ],
+      inputText: '',
     };
   }
 
   componentDidMount() {}
+
+  handleChange = (e) => {
+    this.setState({ inputText: e.target.value });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { capitais, inputText } = this.state;
+
+    const infoCidade = capitais.filter(
+      (capital) => capital.cidade === inputText
+    );
+
+    console.log(infoCidade);
+  };
 
   render() {
     const { capitais } = this.state;
@@ -82,17 +99,18 @@ class App extends Component {
       <main>
         <section id="principal">
           <h1>Previsão do tempo</h1>
-          <div className="search">
+          <form className="search" onSubmit={this.handleSubmit}>
             <input
               type="text"
               name="cidade"
               id="cidade"
               placeholder="Insira aqui o nome da cidade"
+              onChange={this.handleChange}
             />
             <button className="search-btn" type="submit">
               <i className="fas fa-search fa-2x" />
             </button>
-          </div>
+          </form>
         </section>
         <section className="capitais">
           <h2>Capitais</h2>
