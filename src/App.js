@@ -72,6 +72,7 @@ class App extends Component {
         },
       ],
       inputText: '',
+      cidadeInfoShow: false,
     };
   }
 
@@ -90,11 +91,13 @@ class App extends Component {
       (capital) => capital.cidade === inputText
     );
 
-    console.log(infoCidade);
+    const showDiv = infoCidade.length > 0;
+
+    this.setState({ cidadeInfoShow: showDiv });
   };
 
   render() {
-    const { capitais } = this.state;
+    const { capitais, cidadeInfoShow } = this.state;
     return (
       <main>
         <section id="principal">
@@ -112,6 +115,7 @@ class App extends Component {
             </button>
           </form>
         </section>
+        {cidadeInfoShow ? <h1>verdadeiro</h1> : ''}
         <section className="capitais">
           <h2>Capitais</h2>
           <h3 className="title">
